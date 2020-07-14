@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<!-- thẻ <head> dùng mô tả thông tin trang web, vd: tiêu đề, nhúng các link css, js... -->
+<head>
+	<!-- Hỗ trợ hiển thị ký tự có dấu trên trang -->
+	<meta charset="utf-8">
+	<title>Tiêu đề trang web</title>
+</head>
+<!-- thẻ <body> chứa các nội dung sẽ hiển thị ra trình duyệt tới user-->
+<body>
+		Hello world
+		<!-- học HTML là học cú pháp các thẻ, và cách hiển thị các thẻ đó -->
+		<!-- thẻ <h>-heading có các thẻ từ h1 đến h6 tương đương kích cỡ chữ giảm dần từ h1 đến h6 -->
+		<h1>h1</h1>
+		<h2>h2</h2>
+		<h3>h3</h3>
+		<h4>h4</h4>
+		<h5>h5</h5>
+		<h6>h6</h6>
+		<!-- thẻ <p>-paragraph đoạn văn cách nhau bởi 1 khoảng trắng -->
+		<p>thẻ p1</p>
+		<p>thẻ p2</p>
+		<!-- thẻ <br>-break thẻ khuyết, xuống dòng -->
+		<p>Đoạn văn sau đây <br />sẽ bị xuống dòng </p>
+		<!-- thẻ <hr>-horizontal thẻ khuyết, tạo 1 đường kẻ ngang -->
+		<hr />
+		<!-- Thẻ <i>-italic in ngiêng -->
+		<i>In nghiêng</i>
+		<!-- thẻ <b>-bold in đậm -->
+		<b>In đậm</b>
+		<!-- thẻ <u>-underline gạch chân text -->
+		<u>Gạch chân</u>
+		<!-- thẻ <div> dùng để bao lấy thẻ khác, xây dựng các khối trên trang, thẻ này thường kết hợp với css thì mới có tác dụng -->
+		<div></div>
+		<!-- thẻ <span> định dạng lại text trong 1 khối văn bản, luôn kết hợp với css -->
+		<span></span>
+		<!-- thẻ <meta> thẻ khuyết định nghĩa các siêu dữ liệu trên trang, khai báo các thẻ meta bên trong <head> -->
+		<!-- thẻ <img> hiển thị ảnh trên trang web sẽ có 1 số thuộc tính sau:
+		+ src: đường dẫn tới file ảnh, sử dụng đường dẫn tương đối để nhúng file, xác định đường dẫn tương đối như sau: vị trí file muốn nhúng so với  file hiện tại.
+		+ title: text hiển thị khi rê chuột (hover) qua ảnh
+		+ alt: text hiển thị khi đường dẫn ảnh ko tồn tại
+		+ width: chiều dài ảnh
+		+ height: chiểu rộng ảnh -->
+		<img src="D:\ảnh bamboo sapa\210656131.jpg" title="hover" alt="Không hiển thị" />
+
+		<!-- các thẻ liên quan đến bảng -->
+		<table border="1" cellpadding="5" cellspacing="0">
+			<!-- thẻ <tr>-table row hàng -->
+			<tr>
+				<!-- thẻ <th> cột chứa tiêu đề của bảng-->
+				<th>Name</th>
+				<th>Age</th>
+				<th>Address</th>
+			</tr>
+			<tr>
+				<!-- thẻ <td>-table data cột chứa dữ liệu -->
+				<!-- gộp cột sử dụng thuộc tính colspan cho thẻ <td>, khi gộp phải giữ cấu trúc bản đầu của bảng -->
+				<td colspan="2">ABC</td>
+				<!-- <td>30</td> -->
+				<!-- gộp hàng sử dụng thuộc tính rowspan cho thẻ <td>, khi gộp phải giữ cấu trúc ban đầu của bảng -->
+				<td rowspan="2">ABCABC</td>
+			</tr>
+			<tr>
+				<!-- thẻ <td>-table data cột chứa dữ liệu -->
+				<td>ABCD</td>
+				<td>25</td>
+				<!-- <td>ABCDABCD</td> -->
+			</tr>
+		</table>
+
+		<!-- các thẻ liên quan đến danh sách -->
+		<!-- thẻ <ul>-unonder list, <li> thẻ danh sách ko có thứ tự -->
+		<ul>
+			<li>thẻ li 1</li>
+			<li>thẻ li 2</li>
+			<li>thẻ li 3</li>
+		</ul>
+		<!-- thẻ <ol> - onderlist thẻ danh sách có thứ tự -->
+		<ol>
+			<li>thẻ li 1</li>
+			<li>thẻ li 2</li>
+			<li>thẻ li 3</li>
+		</ol>
+
+		<!-- thẻ <a> đường dẫn link -->
+		<a href="https://www.google.com" title="aaaa" target="_blank">Click vào đây</a>
+</body>
+</html>
