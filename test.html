@@ -84,5 +84,72 @@
 
 		<!-- thẻ <a> đường dẫn link -->
 		<a href="https://www.google.com" title="aaaa" target="_blank">Click vào đây</a>
+
+		<!-- thẻ liên quan đến form: -->
+		<form>
+			username:
+			<input type="text" />
+			password:
+			<input type="password" />
+			<input type="Submit" value="Login" />
+		</form>
+		<!-- <form> là nơi lấy thông tin từ user, sử dụng thẻ <form> để xây dựng, luôn dùng để bao lấy các <input> bên trong
+		Thuộc tính:
+		+ action: url sẽ xử lý submit form
+		+ method: phương thức xử lý form, có 2 phương thức: GET và POST -->
+		<form action="" method="GET">
+			<!-- trong form sẽ có các input để user có thể nhập liệu. Thẻ <input> là thẻ khuyết có 1 số thuộc tính sau:
+			+ type: kiểu nhập dữ liệu, có các giá trị sau: text, number, password, reset, radio, checkpass, file, submit, hidden
+			+ name: dùng khi code PHP
+			+ value: giá trị khởi tạo mặc địnhcho input đó
+			+ placeholder: là text gợi nhớ cho chức năng của input
+			+ multiple: áp dụng cho thẻ select, input file cho phép chọn nhiều
+			+ selected: chọn sẵn giá trị cho thẻ select
+			+ checked: chọn sẵn giá trị cho radio, checkbox -->
+			Nhập tên:
+			<input type="text" value="abc" />
+			<br />
+			Nhập tuổi:
+			<input type="number" placeholder="Mời bạn nhập tuổi" />
+			<br />
+			Nhập mật khẩu:
+			<input type="password" />
+			<br />
+			Giới tính:
+			<!-- với input radio, bắt buộc phải khai báo thuộc tính name, giá trị phải trùng nhau -->
+			<input type="radio" name="gender" value="0" /> Nữ
+			<input type="radio" name="gender" value="1" /> Nam
+			<br />
+			Nghề nghiệp:
+			<input type="checkbox" value="0" /> Giảng viên
+			<input type="checkbox" value="1" /> Developer
+			<br />
+			Upload:
+			<input type="file" />
+			<br />
+			Upload nhiều file:
+			<input type="file" multiple />
+			<br />
+			Ghi chú:
+			<textarea placeholder="Nhập ghi chú" cols="20" rows="8">
+			</textarea>
+			<br />
+			Quốc gia:
+			<!-- thẻ <select> luôn đi kèm với thẻ <option> -->
+			<select>
+				<option value="0">VN</option>
+				<option value="1">USA</option>
+				<option value="2">UK</option>
+			</select>
+			<br />
+			<input type="submit" value="show thông tin" />
+			<br />
+			<input type="reset" value="xóa thông tin">
+		</form>
+
+		<!-- thẻ <button> tạo ra nút chứa text hoặc ảnh và click được-->
+		<button type="text">Button</button>
+		<!-- thẻ <center> căn giữa nội dung bên trong -->
+		<center>nội dung bị căn giữa</center>
 </body>
 </html>
