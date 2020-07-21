@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Các thuộc tính CSS cơ bản phần 1</title>
+</head>
+<body>
+	<style type="text/css" media="screen">
+	/* 1 - Background: màu nền*/
+		body{
+			min-height: 1500px;
+		}
+		#p-background {
+			background-color: red;
+		/* tạo nền là ảnh */
+			background-image: url("D:/ảnh bamboo sapa/210656131.jpg");
+		/*ko lặp lại ảnh nền*/
+			background-repeat: no-repeat;
+		/*set vị trí hiển thị ảnh nền */
+			background-position: center;
+		/*trong css có giải pháp viết gộp thuộc tính css cho ngắn gọn*/
+		/*cách viết sau tương đương với cách khai báo trên*/
+			background: red url("D:/ảnh bamboo sapa/210656131.jpg") no-repeat center ;
+		}
+	/* 2 - Font */
+		#span-font{
+			/*set font chữ*/
+			font-family: "Times New Roman";
+			/*in nghiêng*/
+			font-style: italic;
+			/*bôi đậm*/
+			font-weight: bold;
+			/*kích cữ font*/
+			font-size: 20px;
+			/* thực tế khi css sẽ sử dụng công cụ inspect HTML của trình duyệt để CSS cho trực quan */
+		}
+	/* 3 - Text */
+		#p-text {
+    		color: #f3a921;
+    		text-align: center;
+    		text-decoration: underline;
+    		text-transform: uppercase;
+    		text-shadow: 3px 3px 8px sienna;
+    		line-height: 10px;
+		}
+	/* 4 - Border */
+		#p-border {
+    		border-radius: 20px;
+    		border: 3px solid blue;
+		}
+	/* 5 - Margin: khoảng cách giữa các phần tử html liền kề với nhau */
+		#p-margin {
+		    background: yellow;
+		    margin-top: 50px;
+		    margin-left: 50px;
+		    margin-right: 50px;
+		    margin-bottom: 50px;
+		/* 1 giá trị, margin đều 4 hướng = 40px */
+			margin: 40px;
+		/* 2 giá trị, trên-dưới: 20px trái-phải: 10px */
+			margin: 20px 10px;
+		/* 4 giá trị, trên - phải - dưới - trái */
+			margin: 10px 15px 20px 25px;
+		}
+	/* 6 - Padding: khoảng cách từ border đến nội dung bên trong phần tử */
+		#div-padding {
+		    border: 1px solid red;
+		    padding-top: 10px;
+		    padding-bottom: 10px;
+		    padding-left: 50px;
+		    padding-right: 20px;
+		/* cách viết gộp giống margin*/
+		}
+	/* 7 - Position: relative, absolute, fixed */
+		/* fixed: luôn cố định trên trang dù có cuộn trang đến vị trí nào đi nữa */
+		#div-fixed {
+			background: red;
+			position: fixed;
+			top: 261px;
+    		right: 294px
+		}
+		/* relative: vị trí được xác định dựa vào vị trí ban đầu tương đối của chính phần tử đó */
+		#div-relative {
+			width: 100px;
+			height: 100px;
+			background:yellow;
+			position: relative;
+			left: 271px;
+		}
+		/* absolute: lấy 4 cạnh của trình duyệt làm vị trí ban đầu */
+		#div-absolute {
+			background: blue;
+			position: absolute;
+		}
+		/* thường sử dụng absolute trong 1 khối relative, khi này vị trí mặc định của absolute sẽ lấy theo vị trí của khối cha gần nhất đang có position: relative */
+		#relative {
+			background:red;
+			width: 600px;
+			height: 100px;
+			position: relative;
+			top: 100px;
+		}
+	</style>
+	<p id="p-background">Thẻ p với css background</p>
+	<span id="span-font">Thẻ span với css font</span>
+	<p id="p-text">Thẻ p với css text</p>
+	<p id="p-border">Thẻ p với css border</p>
+	<p id="p-margin">Thẻ p với css margin</p>
+	<div id="div-padding">
+		Thẻ div với css padding
+	</div>
+	<div id="div-fixed">
+		Thẻ div được css position fixed
+	</div>
+	<div id="div-relative">
+		Thẻ div được css position relative
+	</div>
+	<div id="div-absolute">
+		Thẻ div được css position absolute
+	</div>
+	<div id="relative">
+		<span id="absolute">thẻ span</span>
+	</div>
+</body>
+</html>

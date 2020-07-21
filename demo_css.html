@@ -1,0 +1,95 @@
+<!--
+CSS là ngôn ngữ của Frontend, hướng đến trang trí cho trang web của bạn
+CSS cho phép làm web repsonsive, tương thích với nhiều thiết bị như PC, Ipad, Mobile
+CSS có đuôi file .css
+Cú pháp khai báo CSS: -->
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<title>Demo CSS</title>
+	<link rel="stylesheet" type="text/css" href="style.css" />
+	<style type="text/css">
+		h1 {
+			color: red;
+			background-color: yellow;
+		}
+		/*
+		+ h1: selector - là phần tử bị chịu ảnh hưởng từ css của bạn
+		+ color: thuộc tính của css
+		+ red: giá trị tương ứng của thuộc tính
+		*/
+		/* selector với id sẽ có tiền tố # */
+		#selector-id{
+			color: red;
+		}
+		/* selector với class sẽ có tiền tố . */
+		.selector-class{
+			border: 1px solid blue;
+		}
+		#parent p{
+			color: green;
+		}
+		/* Selector theo tên thẻ: thường dùng khi css ở toàn cục */
+		p{
+			font-weight: bolder;
+		}
+		input[type='text']{
+			background: red;
+		}
+		#p-hover:hover {
+			color: blue;
+		}
+		ul li:first-child {
+			background: green;
+		}
+		ul li:last-child {
+			background: red;
+		}
+		ul li:nth-child(3) {
+			background: yellow;
+		}
+		/* Trạng thái before, after bắt buộc phải khai báo thuộc tính content, thường được sử dung cho việc hiển thị các font */
+		#a-before-after:before {
+			content: "Dùng CSS thêm content phía trước selector hiện tại";
+		}
+		#a-before-after:after {
+			content: "Dùng CSS thêm content phía sau selector hiện tại";
+		}
+	</style>
+	<!-- Cách xác định selector trong Css:
+	+ Selector theo thuộc tính id và class của thẻ:
+	Thuộc tính id sẽ đại diện cho tính duy nhất trên trang
+	Thuộc tính class sẽ đại diện cho tính sử dụng lại
+	+ Selector theo trạng thái: hover - rê chuột qua, first-child: phân tử đầu tiên của thuộc tính phân cấp... -->
+</head>
+<body>
+	<!-- Các cánh nhúng code Css khi làm việc HTML:
+	1 - nhúng inline ngay trong thẻ html thông qua thuộc tính style cho thẻ
+	2 - nhúng inline trong file .html thông qua cặp thẻ <style>
+	3 - nhúng từ 1 file ccss bên ngoài: sử dụng thẻ <link> để nhúng ở trong thẻ <head> -->
+	<!-- Demo cách thứ nhất  -->
+	<span style="color: red">Thẻ span với cách nhúng css thứ nhất</span>
+	<h1>DEMO CSS</h1>
+	<a href="#" title="#" id="selector-id" class="selector-class">Thẻ a với selector id và class</a>
+	<!-- Selector theo cấp cha con: mọi thẻ p nằm trong selector có id = parent sẽ bị ăn css -->
+	<div id="parent">
+		<p>Thẻ p1</p>
+		<p>Thẻ p2</p>
+	</div>
+	<p>Thẻ p bên ngoài</p>
+	<!-- Selector theo thuộc tính thẻ -->
+	<form action="" method="get">
+		<input type="text" value="123" />
+		<input type="password" />
+	</form>
+	<p id="p-hover">Rê chuột qua thẻ p này để đổi màu text</p>
+	<ul>
+		<li>thẻ li thứ nhất</li>
+		<li>thẻ li thứ 2</li>
+		<li>thẻ li thứ 3</li>
+		<li>thẻ li thứ 4</li>
+	</ul>
+	<a href="#" title="#" id="a-before-after">Thẻ a</a>
+</body>
+</html>
