@@ -1,0 +1,38 @@
+/*span {
+	border: 2px solid blue;
+}*/
+body{
+
+}
+.container{
+	/*background: red;*/
+	width: 50%;
+	margin: 0 auto;
+	border: 1px solid black;
+}
+.header{
+	background: #666666;
+}
+/*trình duyệt tự css 1 số thuộc tính mặc định cho thẻ nên cần check kỹ sự ảnh hưởng này */
+.heading{
+	margin: 0;
+	color: white;
+	text-align: center;
+	padding: 20px;
+}
+.row{
+	display: flex;
+}
+/* sau khi set display:flex cho khối cha cần set width cho các khối con */
+.menu{
+	width: 40%;
+}
+.content{
+	width: 60%;
+}
+.footer{
+	background: #666666;
+	color: white;
+	text-align: center;
+	padding: 10px;
+}

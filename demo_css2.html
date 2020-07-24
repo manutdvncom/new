@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Demo css phần 2</title>
+</head>
+<body>
+	<style type="text/css" media="screen">
+	/* 2- CSS liên quan đến bố cục: thành phần inline và block
+	Inline: text bất kỳ nằm trước/sau phần tử inline thì sẽ ko bị xuống dòng
+	Block: text bất kỳ nằm trước/sau phần tử block thì sẽ ko bị xuống dòng
+	Một số thẻ mặc định inline: h, i, u, a, span, img...
+	một số thẻ block: div, h, p, ul, ol...
+	Sẽ có 1 thuộc tính cho phép chuyển đổi tính linh hoạt giữa inline và block: display
+	Chuyển từ block về inline nên dùng display: inline-block
+	Thực tế ko nên sử dụng inline hay block cho mục đích dựng layout - bố cục trang */
+	ul li{
+		display: inline-block;
+		margin: 0 15px;
+	}
+	/* CSS float: dùng cho việc dựng layout - chia bố cục cho trang
+	Hiện nay sẽ ít sử dựng <table> để dựng layout vì ko linh hoạt trong việc thiết kế web responsive
+	CSS float có 3 giá trị chính: left, right, none;
+	Khái niệm dựng layout sẽ liên quan đến hàng và cột */
+	.container{
+		border: 4px solid black;
+		overflow: auto;
+	}
+	.col1{
+		background: red;
+	}
+	.col2{
+		background: green;
+	}
+	.col3{
+		background: yellow;
+	}
+	/* khi sử dụng float dựng layout nên set width theo % */
+	/* fix vỡ giao diện:
+	+ can thiệp html bằng cách thêm 1 phần tử bất kỳ vào sau của phần tử cuối cùng đang bị float, sử dụng clear:both cho phần tử vừa thêm
+	+ chỉ sử dụng CSS trên khối cha đang bao lấy các phần tử bị float bên trong overflow:auto (nên ưu tiên) */
+	.col{
+		float: left;
+		width: 33.33%;
+	}
+	/*.clearfix{
+		clear: both;
+	}*/
+	/* CSS flex nên ưu tiên sử dụng vì tính linh hoạt cao, luôn giữ các khối con bên trong nó trên cùng 1 hàng cho dù có thay đổi kích thước các khối con
+	Để dựng layout với flex sẽ can thiệp css vào khối cha display:flex */
+	.flex-container{
+		background: pink;
+		display: flex;
+	}
+	.flex1{
+		background: red;
+	}
+	.flex2{
+		background: green;
+	}
+	.flex3{
+		background: yellow;
+	}
+	.flex4{
+		background: blue;
+	}
+	.flex-item{
+		width: 25%;
+	}
+	</style>
+	<div class="flex-container">
+		<div class="flex1 flex-item">
+			Cột 1
+		</div>
+		<div class="flex2 flex-item">
+			Cột 2
+		</div>
+		<div class="flex3 flex-item">
+			Cột 3
+		</div>
+		<div class="flex4 flex-item">
+			Cột 4
+		</div>
+	</div>
+	<!-- Thực hành dựng layout với float -->
+	<div class="container">
+		<div class="row">
+			<div class="col">
+				cột 1111111111 1111
+				cột 1111111111 1111
+				cột 1111111111 1111
+			</div>
+			<div class="col">
+				cột 1111111111 1111
+				cột 1111111111 1111
+				cột 1111111111 1111
+			</div>
+			<div class="col">
+				cột 1111111111 1111
+				cột 1111111111 1111
+				cột 1111111111 1111
+			</div>
+		</div>
+		<div class="row">
+			<div class="col">
+				cột 1111111111 1111
+				cột 1111111111 1111
+				cột 1111111111 1111
+			</div>
+			<div class="col">
+				cột 1111111111 1111
+				cột 1111111111 1111
+				cột 1111111111 1111
+			</div>
+			<div class="col">
+				cột 1111111111 1111
+				cột 1111111111 1111
+				cột 1111111111 1111
+			</div>
+		</div>
+	</div>
+	<div class="container">
+		<div class="col1 col">
+			Cột 1
+		</div>
+		<div class="col2 col">
+			Cột 2
+		</div>
+		<div class="col3 col">
+			Cột 3
+		</div>
+		<!-- <div class="clearfix"></div> -->
+	</div>
+	<!-- Xây dựng 1 menu đơn giản sử dụng cấu trúc ul - li -->
+	<ul>
+		<li><a href="#" title="#">Link 1</a></li>
+		<li><a href="#" title="#">Link 2</a></li>
+		<li><a href="#" title="#">Link 3</a></li>
+	</ul>
+	<span style="display: block;">Thẻ span</span>Text kiểm tra
+	<a href="#" title="#">Thẻ a1</a>
+	<a href="#" title="#">Thẻ a2</a>
+	<div>Thẻ div 1</div><div>Thẻ div 2</div>
+</body>
+</html>
