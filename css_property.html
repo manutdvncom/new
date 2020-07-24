@@ -76,7 +76,7 @@
 			background: red;
 			position: fixed;
 			top: 261px;
-    		right: 294px
+    		right: 294px;
 		}
 		/* relative: vị trí được xác định dựa vào vị trí ban đầu tương đối của chính phần tử đó */
 		#div-relative {
@@ -99,7 +99,60 @@
 			position: relative;
 			top: 100px;
 		}
+		span{
+			position: absolute;
+			background: blue;
+		}
+		/* z-index: thể hiện cho mức độ ưu tiên hiển thị của các phần tử đang có css position */
+		#z-index1{
+			width: 100px;
+			height: 100px;
+			background: red;
+		}
+		#z-index2{
+			width: 200px;
+			height: 200px;
+			background: blue;
+			z-index: 2;
+		}
+		#z-index3{
+			width: 300px;
+			height: 300px;
+			background: yellow;
+		}
+		#z-index1, #z-index2, #z-index3 {
+			position: absolute;
+		}
+		/* css overflow: xác định cách thức hiển thị khi 1 phần tử HTML bị tràn nội dung
+		có 3 giá trị chính: auto, hidden, scroll */
+		#div-overflow{
+			background: red;
+			width: 100px;
+			height: 100px;
+			overflow: hidden;
+		}
+		/* css opacity: xét độ mờ cho phần tử */
+		#h1-opacity{
+			opacity: 0.2;
+		}
+		/* css transition: xác định thời gian và hiệu ứng chuyển đổi trạng thái của phần tử */
+		#div-transition{
+			width: 200px;
+			height: 200px;
+			background: red;
+			transition: all 2s ease;
+		}
+		#div-transition:hover {
+			background: blue;
+		}
 	</style>
+	<div id="div-transition">
+		Rê chuột qua div này để xem hiệu ứng đổi màu nền
+	</div>
+	<h1 id="h1-opacity">H1 với css opacity</h1>
+	<div id="div-overflow">
+		aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+	</div>
 	<p id="p-background">Thẻ p với css background</p>
 	<span id="span-font">Thẻ span với css font</span>
 	<p id="p-text">Thẻ p với css text</p>
@@ -119,6 +172,15 @@
 	</div>
 	<div id="relative">
 		<span id="absolute">thẻ span</span>
+	</div>
+	<div id="z-index1">
+		red
+	</div>
+	<div id="z-index2">
+		blue
+	</div>
+	<div id="z-index3">
+		yellow
 	</div>
 </body>
 </html>
