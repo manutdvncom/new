@@ -1,0 +1,86 @@
+body{
+	background: aliceblue;
+}
+.container{
+	width: 60%;
+	margin: 0 auto;
+}
+.logo{
+	background: #EFEFEF;
+	text-align: center;
+	font-weight: bold;
+	text-transform: capitalize;
+	padding: 2px 0;
+}
+.menu{
+	background: #EFEFEF;
+	text-align: center;
+	padding: 4px 0;
+	margin-top: 5px;
+}
+ul {
+	list-style: none;
+}
+ul li {
+	/*nên sử dụng inline-block*/
+	display: inline-block;
+	margin: 0 10px;
+}
+ul li a{
+	text-decoration: none;
+}
+.feature{
+	background: #EFEFEF;
+	margin-top: 15px;
+	text-align: center;
+	text-transform: capitalize;
+	font-weight: bold;
+	height: 100px;
+}
+.main-content{
+	margin-top: 10px;
+	text-align: center;
+	text-transform: capitalize;
+}
+/* ngoài float, display:flex còn có 1 cách dàn trang layout khác là display:grid */
+.row{
+	display: flex;
+	/* giá trị margin có thể nhận giá trị âm, tuy nhiên padding thì không */
+	margin: 0 -10px;
+}
+.col{
+	/* độ rộng của cột có cấu trúc layout thường có đơn vị là % để còn responsive về sau */
+	background: #EFEFEF;
+	width:33.33%;
+	height: 100px;
+	padding-top: 5px;
+	margin: 0 10px;
+	font-weight: bold;
+}
+.footer{
+	background: #EFEFEF;
+	margin-top: 15px;
+	text-align: center;
+	padding-top: 10px;
+	padding-bottom: 15px;
+	font-weight: bold;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
